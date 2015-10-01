@@ -9,7 +9,7 @@ class DAGNode
 public:
     DAGNode(std::string name);
     DAGNode(std::string name, double value);
-    void addDependency(DAGNode* const node);
+    void addDependency(DAGNode* node);
     void evaluate();
     double getValue() const { return mValue; }
     bool isEvaluated() const { return mEvaluated; }

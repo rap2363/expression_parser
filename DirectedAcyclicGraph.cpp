@@ -10,13 +10,18 @@ DAGNode::DAGNode(std::string name, double value)
 {
 }
 
-void DAGNode::addDependency(DAGNode* const node)
+void DAGNode::addDependency(DAGNode* node)
 {
     mDependencies.push_back(node);
 }
 
 void DAGNode::evaluate()
 {
+    if (isEvaluated())
+    {
+        return;
+    }
+
     for (auto iter = mDependencies.begin(); iter != mDependencies.end(); ++iter)
     {
         if (!(*iter)->isEvaluated()) // If dependency needs to be evaluated, do so before adding its value
