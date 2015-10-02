@@ -1,4 +1,10 @@
-x = g+3
-y=13 +   z
-z   = x + g
-g = 1
+j = e + f + g + h + i
+i = 5
+h = 4
+g = 3
+f = 2
+e = 1
+d = i + j
+c = g + h
+b = e + f
+a = b + c + d
