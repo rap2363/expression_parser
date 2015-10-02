@@ -4,14 +4,14 @@ CFLAG = -c
 
 all: expressionparser
 
-expressionparser: main.o
+expressionparser: main.o DirectedAcyclicGraph.o
 	$(CPP) DirectedAcyclicGraph.o main.o $(OFLAG) bin/expressionparser
 
 DirectedAcyclicGraph.o: DirectedAcyclicGraph.cpp
 	$(CPP) $(CFLAG) DirectedAcyclicGraph.cpp
 
 main.o: main.cpp
-	$(CPP) $(CFLAG) main.cpp $(OFLAG)
+	$(CPP) $(CFLAG) main.cpp
 
 clean:
-	rm *.o bin/*
+	rm *.o bin/expressionparser

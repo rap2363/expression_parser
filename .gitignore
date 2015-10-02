@@ -1,2 +1,3 @@
-Ignore bin
+Ignore bin and object modules
+*.o
 bin/
